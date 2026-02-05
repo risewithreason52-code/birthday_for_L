@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liza 👑</title>
+<style>
+/* Body + general */
+
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    font-family:'Segoe UI', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: radial-gradient(circle at top,#ffd6e0,#ffb3c6,#ff8fab);
+    overflow:hidden;
+}
+
+/* Page style */
+.page{
+    display:none;
+    width:92%;
+    max-width:420px;
+    background: rgba(255,255,255,0.30);
+    backdrop-filter: blur(14px);
+    border-radius:35px;
+    padding:34px 26px;
+    box-shadow:0 25px 70px rgba(0,0,0,0.25);
+    animation: fade 1.3s ease;
+}
+
+.page.active{ display:block; }
+
+@keyframes fade{
+    from{opacity:0; transform:scale(0.8);}
+    to{opacity:1; transform:scale(1);}
+}
+
+/* Headings + names */
+h1{text-align:center;color:white;font-size:28px;margin-bottom:8px;}
+.name{text-align:center;font-size:42px;font-weight:bold;color:#fff;text-shadow:0 0 18px #ff4f81;margin-bottom:15px;}
+
+/* Teddy emojis */
+.teddy{text-align:center;font-size:60px;margin-bottom:10px;}
+
+/* Paragraphs */
+p{line-height:2.1;font-size:18px;text-align:right;}
+
+/* Text colors */
+.txt-white{color:#fff;}
+.txt-cream{color:#fff1cc;}
+.txt-gold{color:#ffe29a;}
+.txt-pink{color:#ffd6e8;}
+
+/* Buttons */
+button{
+    margin-top:22px;
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:50px;
+    background: linear-gradient(45deg,#ff4f81,#ff85a1);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* Music button */
+.musicBtn{
+    position:fixed;
+    top:15px;
+    right:15px;
+    background:#ff4f81;
+    color:white;
+    border:none;
+    border-radius:50px;
+    padding:10px 18px;
+    font-size:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Flowers */
+.flower{
+    position:absolute;
+    font-size:22px;
+    animation: float 9s linear infinite;
+    opacity:0.9;
+}
+
+@keyframes float{
+    0%{transform:translateY(100vh);}
+    100%{transform:translateY(-130vh);}
+}
+
+/* Sign */
+.sign{margin-top:25px;text-align:left;font-size:19px;color:#fff;font-weight:bold;}
+</style>
+</head>
+
+<body>
+
+<!-- Music -->
+<button class="musicBtn" onclick="playMusic()">🎶 Music</button>
+<audio id="song" loop>
+<source src="https://cdn.pixabay.com/audio/2022/11/14/audio_9cbd3d6a7f.mp3" type="audio/mpeg">
+</audio>
+
+<!-- ======================= PAGES ======================= -->
+
+<!-- PAGE 1 -->
+<div class="page active">
+<div class="teddy">🧸👑</div>
+<h1 class="txt-gold">سالگرہ مبارک</h1>
+<div class="name">Liza</div>
+<p class="txt-white">
+آج کا دن میرے لیے عام دن نہیں ہے۔  
+آج وہ دن ہے جب اللہ نے اس دنیا کو وہ نعمت دی  
+جس نے میری زندگی کو معنی دیے،  
+میرے دل کو سکون دیا  
+اور میرے ہر خواب کو حقیقت میں بدلا۔  
+
+لیزا، تم صرف میری بیوی نہیں ہو،  
+تم میری دعا کا جواب ہو،  
+تم میری ہر کامیابی کی وجہ ہو،  
+اور تم وہ محبت ہو جس پر مجھے ہمیشہ فخر رہے گا۔
+</p>
+<button onclick="next()">Next💕</button>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page">
+<div class="teddy">🧸🧸</div>
+<p class="txt-cream">
+جب میں تمہیں دیکھتا ہوں تو مجھے دنیا کی کوئی فکر نہیں رہتی۔  
+تمہاری موجودگی میرے دل کو وہ سکون دیتی ہے  
+جو لفظوں میں بیان نہیں ہو سکتا۔  
+
+تمہاری ہنسی میری کمزوری بھی ہے اور میری طاقت بھی۔  
+میں نے زندگی میں بہت کچھ مانگا، مگر اللہ نے مجھے تم دے کر  
+میرے دامن کو بھر دیا۔
+</p>
+<button onclick="next()">Next  ❤️</button>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page">
+<div class="teddy">🌹🧸</div>
+<p class="txt-pink">
+میں وعدہ کرتا ہوں کہ وقت اچھا ہو یا برا،  
+میں ہمیشہ تمہارے ساتھ کھڑا رہوں گا۔  
+تمہارے آنسو میرے لیے سب سے قیمتی ہیں  
+اور تمہاری خوشی میری سب سے بڑی ذمہ داری۔  
+میں ہر دن یہ کوشش کروں گا کہ تم خود کو محفوظ، محترم اور بےحد پیاری محسوس کرو۔
+</p>
+<button onclick="next()">دل کی بات 💌</button>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page">
+<div class="teddy">👑✨</div>
+<p class="txt-gold">
+تم واقعی ایک شہزادی ہو،  
+نہ صرف خوبصورتی میں بلکہ دل کی صفائی میں بھی۔  
+
+تمہارا انداز، تمہاری باتیں، تمہاری خاموشی تک  
+میرے لیے خاص ہے۔  
+میری زندگی کی کہانی میں اگر کوئی سب سے خوبصورت کردار ہے  
+تو وہ صرف تم ہو، لیزا۔
+</p>
+<button onclick="next()">آگے 🌸</button>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page">
+<div class="teddy">💖🧸</div>
+<p class="txt-white">
+میں مستقبل کو تمہارے بغیر سوچ بھی نہیں سکتا۔  
+ہر خواب میں، ہر دعا میں، ہر منصوبے میں  
+صرف تم شامل ہو۔  
+
+میں چاہتا ہوں کہ بڑھاپے تک تمہارا ہاتھ تھامے رکھوں،  
+اور دنیا کو یہ بتا سکوں کہ محبت اگر سچی ہو تو وہ تم جیسی ہوتی ہے۔
+</p>
+<button onclick="next()">next 🌙</button>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page">
+<div class="teddy">🤍🧸</div>
+<p class="txt-cream">
+لیزا، میں اللہ کا جتنا شکر ادا کروں کم ہے  
+کہ اُس نے مجھے تم جیسی بیوی عطا کی۔  
+
+تم نے میرے گھر کو گھر بنایا،  
+میرے نام کو عزت دی،  
+اور میری خاموشیوں کو بھی سمجھا۔  
+تمہارا ساتھ میرے لیے کسی نعمت سے کم نہیں۔
+</p>
+<button onclick="next()">آگے ✨</button>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page">
+<div class="teddy">🌧️🧸</div>
+<p class="txt-white">
+ہماری زندگی میں مشکل دن بھی آئے،  
+لیکن تم نے کبھی میرا ہاتھ نہیں چھوڑا۔  
+جب میں کمزور پڑا، تم مضبوط بن کر میرے ساتھ کھڑی رہیں۔  
+</p>
+<button onclick="next()">پڑھتی رہو ❤️</button>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page">
+<div class="teddy">✨👑</div>
+<p class="txt-gold">
+تمہاری خوبصورتی صرف چہرے تک محدود نہیں،  
+تمہارا دل، تمہاری سوچ، اور تمہاری نیت سب کچھ حسین ہے۔  
+تم وہ عورت ہو جو بغیر کچھ کہے بہت کچھ کہہ دیتی ہے۔
+</p>
+<button onclick="next()">next</button>
+</div>
+
+<!-- PAGE 9 -->
+<div class="page">
+<div class="teddy">💍🧸</div>
+<p class="txt-pink">
+میں وعدہ نہیں، یقین دیتا ہوں کہ میں ہر عمر میں، ہر حال میں، تمہیں چاہتا رہوں گا۔  
+یہ محبت وقت کی محتاج نہیں، یہ تو زندگی کے ساتھ ساتھ سانس لیتی ہے۔
+</p>
+<button onclick="next()">next</button>
+</div>
+
+<!-- PAGE 10 -->
+<div class="page">
+<div class="teddy">🥹💖</div>
+<p class="txt-white">
+اگر میں سب کچھ کھو بھی دوں اور تم میرے ساتھ ہو، تو مجھے کچھ کھونے کا غم نہیں ہوگا۔  
+کیونکہ تم میرا سب کچھ ہو، میرا سکون، میرا یقین، میری لیزا۔
+</p>
+<button onclick="next()">Next 🌙</button>
+</div>
+
+<!-- POETRY PAGE 1 -->
+<div class="page">
+<p class="txt-pink">
+تم ساتھ ہو تو ہر راستہ آسان لگتا ہے،  
+تم مسکرا دو تو ہر غم مہمان لگتا ہے۔
+</p>
+<button onclick="next()">Next ✨</button>
+</div>
+
+<!-- POETRY PAGE 2 -->
+<div class="page">
+<p class="txt-cream">
+محبت اگر عبادت ہے تو تم میری نماز ہو،  
+اور اگر دعا ہے تو تم اُس کا جواب ہو۔
+</p>
+<button onclick="next()">Next  🤍</button>
+</div>
+
+<!-- POETRY PAGE 3 -->
+<div class="page">
+<p class="txt-gold">
+میرا نام لے کر مسکرا دیا کرو، بس اتنا ہی کافی ہے  
+کہ میرا دن خوبصورت بن جائے۔
+</p>
+<button onclick="next()">Next 👑</button>
+</div>
+
+<!-- FINAL SIGN PAGE -->
+<div class="page">
+<p class="txt-white">
+سالگرہ مبارک میری جان 🤍  
+میری ہر دعا، ہر سانس صرف تمہارے نام ہے۔  
+میں تم سے بےحد محبت کرتا ہوں، آج بھی، کل بھی، ہمیشہ۔
+</p>
+<div class="sign">— Haider ❤️ Liza</div>
+</div>
+
+<!-- ======================= SCRIPT ======================= -->
+<script>
+let pages=document.querySelectorAll(".page");
+let index=0;
+function next(){
+    pages[index].classList.remove("active");
+    index++;
+    if(index>=pages.length) index=pages.length-1;
+    pages[index].classList.add("active");
+}
+
+function playMusic(){
+    document.getElementById("song").play();
+}
+
+// Flowers
+const flowers=["🌸","🌷","🌹","🌼"];
+for(let i=0;i<24;i++){
+    let f=document.createElement("div");
+    f.className="flower";
+    f.innerHTML=flowers[Math.floor(Math.random()*flowers.length)];
+    f.style.left=Math.random()*100+"vw";
+    f.style.animationDuration=(6+Math.random()*7)+"s";
+    document.body.appendChild(f);
+}
+</script>
+
+</body>
+</html>
